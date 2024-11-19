@@ -14,24 +14,21 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                children:[
-                    {
-                        path: '/learn',
-                        element: <Learn></Learn>,
-                    },
-                    {
-                        path: '/lessons',
-                        element: <Lessons></Lessons>,
-                    },
-                    {
-                        path: '/tutorials',
-                        element: <Tutorials></Tutorials>,
-                    },
-                ]
             },
             {
-
-            }
+                path: '/learn',
+                element: <Learn></Learn>,
+                loader: ()=> fetch('word.json'),
+            },
+            {
+                path: '/lessons',
+                element: <Lessons></Lessons>,
+                loader: ()=> fetch('word.json'),
+            },
+            {
+                path: '/tutorials',
+                element: <Tutorials></Tutorials>,
+            },
         ]
     },
     {
