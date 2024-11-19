@@ -1,6 +1,7 @@
 import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import LeftNav from "../../components/LeftNav";
 import Navbar from "../../components/Navbar";
 
 const HomeLayout = () => {
@@ -16,7 +17,7 @@ const HomeLayout = () => {
 
             <main className="w-11/12 mx-auto pt-5 grid md:grid-cols-12 gap-3 flex-grow">
                 <aside className="left col-span-3">
-                    left nav
+                    <LeftNav></LeftNav>
                 </aside>
 
                 <section className="col-span-7">
