@@ -1,0 +1,223 @@
+[
+    {
+      "id": "1",
+      "word": "こんにちは",
+      "pronunciation": "konnichiwa",
+      "meaning": "hello",
+      "part_of_speech": "greeting",
+      "difficulty": "easy",
+      "lesson_no": 1,
+      "when_to_say": "When greeting someone during the day",
+      "example": "こんにちは、お元気ですか？ (Konnichiwa, o-genki desu ka?)"
+    },
+    {
+      "id": "2",
+      "word": "ありがとう",
+      "pronunciation": "arigatou",
+      "meaning": "thank you",
+      "part_of_speech": "expression",
+      "difficulty": "easy",
+      "lesson_no": 1,
+      "when_to_say": "When expressing gratitude",
+      "example": "プレゼントをありがとう！ (Purezento o arigatou!)"
+    },
+    {
+      "id": "3",
+      "word": "すみません",
+      "pronunciation": "sumimasen",
+      "meaning": "excuse me / sorry",
+      "part_of_speech": "expression",
+      "difficulty": "easy",
+      "lesson_no": 1,
+      "when_to_say": "When apologizing or getting someone's attention",
+      "example": "すみません、道を教えてください。 (Sumimasen, michi o oshiete kudasai.)"
+    },
+    {
+      "id": "4",
+      "word": "犬",
+      "pronunciation": "inu",
+      "meaning": "dog",
+      "part_of_speech": "noun",
+      "difficulty": "easy",
+      "lesson_no": 2,
+      "when_to_say": "When talking about animals",
+      "example": "その犬はかわいいです。 (Sono inu wa kawaii desu.)"
+    },
+    {
+      "id": "5",
+      "word": "食べる",
+      "pronunciation": "taberu",
+      "meaning": "to eat",
+      "part_of_speech": "verb",
+      "difficulty": "medium",
+      "lesson_no": 2,
+      "when_to_say": "When describing the action of eating",
+      "example": "私は寿司を食べる。 (Watashi wa sushi o taberu.)"
+    },
+    {
+      "id": "6",
+      "word": "速い",
+      "pronunciation": "hayai",
+      "meaning": "fast",
+      "part_of_speech": "adjective",
+      "difficulty": "medium",
+      "lesson_no": 3,
+      "when_to_say": "When describing speed",
+      "example": "その車は速いです。 (Sono kuruma wa hayai desu.)"
+    },
+    {
+      "id": "7",
+      "word": "美しい",
+      "pronunciation": "utsukushii",
+      "meaning": "beautiful",
+      "part_of_speech": "adjective",
+      "difficulty": "medium",
+      "lesson_no": 4,
+      "when_to_say": "When describing something beautiful",
+      "example": "富士山は美しいです。 (Fujisan wa utsukushii desu.)"
+    },
+    {
+      "id": "8",
+      "word": "走る",
+      "pronunciation": "hashiru",
+      "meaning": "to run",
+      "part_of_speech": "verb",
+      "difficulty": "medium",
+      "lesson_no": 4,
+      "when_to_say": "When describing the action of running",
+      "example": "彼は毎朝走る。 (Kare wa mai asa hashiru.)"
+    },
+    {
+      "id": "9",
+      "word": "辛い",
+      "pronunciation": "karai",
+      "meaning": "spicy",
+      "part_of_speech": "adjective",
+      "difficulty": "easy",
+      "lesson_no": 5,
+      "when_to_say": "When describing spicy food",
+      "example": "このカレーは辛いです。 (Kono kare wa karai desu.)"
+    },
+    {
+      "id": "10",
+      "word": "勉強する",
+      "pronunciation": "benkyou suru",
+      "meaning": "to study",
+      "part_of_speech": "verb",
+      "difficulty": "medium",
+      "lesson_no": 5,
+      "when_to_say": "When describing the act of studying",
+      "example": "毎日日本語を勉強する。 (Mainichi Nihongo o benkyou suru.)"
+    },
+    {
+        "id": "11",
+        "word": "猫",
+        "pronunciation": "neko",
+        "meaning": "cat",
+        "part_of_speech": "noun",
+        "difficulty": "easy",
+        "lesson_no": 2,
+        "when_to_say": "When talking about animals",
+        "example": "その猫は黒いです。 (Sono neko wa kuroi desu.)"
+      },
+      {
+        "id": "12",
+        "word": "飲む",
+        "pronunciation": "nomu",
+        "meaning": "to drink",
+        "part_of_speech": "verb",
+        "difficulty": "medium",
+        "lesson_no": 3,
+        "when_to_say": "When describing the action of drinking",
+        "example": "私はお茶を飲む。 (Watashi wa ocha o nomu.)"
+      },
+      {
+        "id": "13",
+        "word": "遅い",
+        "pronunciation": "osoi",
+        "meaning": "slow",
+        "part_of_speech": "adjective",
+        "difficulty": "medium",
+        "lesson_no": 3,
+        "when_to_say": "When describing speed",
+        "example": "そのバスは遅いです。 (Sono basu wa osoi desu.)"
+      },
+      {
+        "id": "14",
+        "word": "親切",
+        "pronunciation": "shinsetsu",
+        "meaning": "kind",
+        "part_of_speech": "adjective",
+        "difficulty": "medium",
+        "lesson_no": 4,
+        "when_to_say": "When describing someone's character",
+        "example": "彼女はとても親切です。 (Kanojo wa totemo shinsetsu desu.)"
+      },
+      {
+        "id": "15",
+        "word": "読む",
+        "pronunciation": "yomu",
+        "meaning": "to read",
+        "part_of_speech": "verb",
+        "difficulty": "medium",
+        "lesson_no": 4,
+        "when_to_say": "When describing the action of reading",
+        "example": "彼は本を読むのが好きです。 (Kare wa hon o yomu no ga suki desu.)"
+      },
+      {
+        "id": "16",
+        "word": "寒い",
+        "pronunciation": "samui",
+        "meaning": "cold",
+        "part_of_speech": "adjective",
+        "difficulty": "easy",
+        "lesson_no": 5,
+        "when_to_say": "When describing the weather",
+        "example": "今日はとても寒いです。 (Kyou wa totemo samui desu.)"
+      },
+      {
+        "id": "17",
+        "word": "温かい",
+        "pronunciation": "atatakai",
+        "meaning": "warm",
+        "part_of_speech": "adjective",
+        "difficulty": "easy",
+        "lesson_no": 5,
+        "when_to_say": "When describing temperature",
+        "example": "このスープは温かいです。 (Kono suupu wa atatakai desu.)"
+      },
+      {
+        "id": "18",
+        "word": "笑う",
+        "pronunciation": "warau",
+        "meaning": "to laugh",
+        "part_of_speech": "verb",
+        "difficulty": "medium",
+        "lesson_no": 6,
+        "when_to_say": "When describing the action of laughing",
+        "example": "彼の冗談で笑う。 (Kare no joudan de warau.)"
+      },
+      {
+        "id": "19",
+        "word": "高い",
+        "pronunciation": "takai",
+        "meaning": "expensive / tall",
+        "part_of_speech": "adjective",
+        "difficulty": "medium",
+        "lesson_no": 6,
+        "when_to_say": "When describing height or cost",
+        "example": "この店の品物は高いです。 (Kono mise no shinamono wa takai desu.)"
+      },
+      {
+        "id": "20",
+        "word": "安い",
+        "pronunciation": "yasui",
+        "meaning": "cheap",
+        "part_of_speech": "adjective",
+        "difficulty": "easy",
+        "lesson_no": 6,
+        "when_to_say": "When describing low cost",
+        "example": "この本は安いです。 (Kono hon wa yasui desu.)"
+      }
+  ]
+  

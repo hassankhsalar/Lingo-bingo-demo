@@ -1,3 +1,4 @@
+import Banner from "../../components/Banner";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar";
@@ -19,7 +20,7 @@ const HomeLayout = () => {
                 </aside>
 
                 <section className="col-span-7">
-                    Main section
+                    <Banner></Banner>
                 </section>
 
                 <aside className="col-span-2">
