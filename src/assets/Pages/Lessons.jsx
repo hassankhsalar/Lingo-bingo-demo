@@ -1,9 +1,10 @@
-import { useLoaderData } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import LessonCards from '../../components/LessonCards';
 
 const Lessons = () => {
     const data = useLoaderData();
+    const navigate = useNavigate(); // Initialize navigate
     const [selectedLesson, setSelectedLesson] = useState(null); // State to store the selected lesson
 
     // Filter data based on selected lesson or show all if null
@@ -12,7 +13,11 @@ const Lessons = () => {
         : data;
 
     return (
-        <div>
+        <div className="relative">
+            <div>
+                <h1 className="text-3xl font-bold text-center pb-10">Lessons</h1>
+            </div>
+
             {/* Lesson Filter Buttons */}
             <div className="flex justify-between flex-wrap gap-2 mb-4">
                 {[1, 2, 3, 4, 5, 6].map((lesson) => (
@@ -53,6 +58,15 @@ const Lessons = () => {
                     />
                 ))}
             </div>
+
+            {/* Floating Back to Learning Button */}
+            <button
+                className="fixed bottom-4 right-4 p-3 bg-pink-600 text-white rounded-full shadow-lg 
+                            hover:bg-pink-400 focus:ring-2 focus:ring-blue-300 transition-all sm:bottom-6 sm:right-6"
+                onClick={() => navigate('/learn')}
+            >
+                Back to Learning
+            </button>
         </div>
     );
 };

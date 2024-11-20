@@ -1,4 +1,5 @@
 import { FaUser } from "react-icons/fa";
+import { Link } from "react-router-dom";
 const Navbar = () => {
     return (
         <div className="navbar bg-base-100">
@@ -21,9 +22,9 @@ const Navbar = () => {
       <ul
         tabIndex={0}
         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-        <li><a>Home</a></li>
-        <li><a>Start-Learning</a></li>
-        <li><a>Tutorials</a></li>
+        <li><Link to="/">Home</Link></li>
+    <li><Link to="/learn">Start-Learning</Link></li>
+    <li><Link to="/tutorials">Tutorials</Link></li>
         <li><a>About Us</a></li>
       </ul>
     </div>
@@ -31,9 +32,9 @@ const Navbar = () => {
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
-        <li><a>Home</a></li>
-        <li><a>Start-Learning</a></li>
-        <li><a>Tutorials</a></li>
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/learn">Start-Learning</Link></li>
+    <li><Link to="/tutorials">Tutorials</Link></li>
         <li><a>About Us</a></li>
     </ul>
   </div>
