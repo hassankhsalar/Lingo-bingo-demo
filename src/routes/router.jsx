@@ -4,6 +4,10 @@ import Home from "../components/Home";
 import Learn from "../assets/Pages/Learn";
 import Lessons from "../assets/Pages/Lessons";
 import Tutorials from "../assets/Pages/Tutorials";
+import AuthLayout from "../assets/layouts/AuthLayout";
+import Login from "../assets/Pages/Login";
+import Register from "../assets/Pages/Register";
+import PrivateRoute from "./PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -22,7 +26,10 @@ const router = createBrowserRouter([
             },
             {
                 path: '/lessons',
-                element: <Lessons></Lessons>,
+                element: ( 
+                <PrivateRoute>
+                    <Lessons></Lessons>,
+                </PrivateRoute> ),
                 loader: ()=> fetch('word.json'),
             },
             {
@@ -37,7 +44,17 @@ const router = createBrowserRouter([
     },
     {
         path: "auth",
-        element: <h1>login</h1>
+        element: <AuthLayout></AuthLayout>,
+        children: [
+            {
+                path: "/auth/login",
+                element: <Login></Login>
+            },
+            {
+                path: "/auth/register",
+                element: <Register></Register>
+            },
+        ]
     },
     {
         path: "*",
