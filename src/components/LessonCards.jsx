@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ word, meaning, pronunciation, partOfSpeech, difficulty, lessonNo, whenToSay, example }) => {
+const LessonCards = ({ word, meaning, pronunciation, partOfSpeech, difficulty, lessonNo, whenToSay, example }) => {
     const playPronunciation = () => {
         const utterance = new SpeechSynthesisUtterance(pronunciation);
         utterance.lang = "ja-JP"; // Japanese language code
@@ -41,4 +41,4 @@ const Card = ({ word, meaning, pronunciation, partOfSpeech, difficulty, lessonNo
     );
 };
 
-export default Card;
+export default LessonCards;

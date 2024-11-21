@@ -1,22 +1,23 @@
-import { Children, useContext } from "react";
+import React, { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import { Navigate, useLocation } from "react-router-dom";
+import { Navigate, useLocation, useLoaderData } from "react-router-dom";
 import Loading from "../assets/Pages/Loading";
 
-
-const PrivateRoute = ({ Children }) => {
-
+const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();
-    console.log(location);
-    if(loading){
-       return <Loading></Loading>;
-    }
-    if(user && user?.email) {
-        return Children;
+    const loaderData = useLoaderData(); // Fetch loader data
+
+    if (loading) {
+        return <Loading></Loading>;
     }
 
-    return <Navigate state={location.pathname} to={'/auth/login'}></Navigate>
+    if (user && user.email) {
+        // Pass loaderData to children using React.cloneElement
+        return React.cloneElement(children, { loaderData });
+    }
+
+    return <Navigate state={{ from: location }} to="/auth/login"></Navigate>;
 };
 
 export default PrivateRoute;

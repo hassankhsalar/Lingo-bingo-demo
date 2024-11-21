@@ -1,9 +1,23 @@
+import { useNavigate } from "react-router-dom";
 import gd from "../assets/gd.jpg"
 import slide1 from "../assets/slide1.jpg"
 import slide2 from "../assets/slide2.jpg"
 import slide3 from "../assets/slide3.jpg"
+import { AuthContext } from "../provider/AuthProvider";
+import { useContext } from "react";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Banner = () => {
+  const { user } = useContext(AuthContext); // Access user from AuthContext
+    const navigate = useNavigate();
+  const handleViewMore = () => {
+    if (user) {
+        navigate("/tutorials");
+    } else {
+      toast.error("Please log in to view more tutorials.");
+    }
+};
     return (
         <div>
             {/* language lab part div start */}
@@ -57,7 +71,24 @@ const Banner = () => {
               </div>
             </div>
             {/* slider end */}
+            <section className="w-11/12 mx-auto my-10 bg-white shadow-lg rounded-lg p-6">
+            <h2 className="text-3xl font-bold text-center mb-4">Tutorials</h2>
             
+            {/* YouTube Video Section */}
+            <div className="relative pb-[56.25%] h-0 overflow-hidden rounded-lg shadow-md">
+                <iframe className="absolute top-0 left-0 w-full h-full" src="https://www.youtube.com/embed/p9PEIsOzJ5E?si=6aLtV-AtfI8KN5G2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+            {/* View More Button */}
+            <div className="text-center mt-6">
+                <button
+                    onClick={handleViewMore}
+                    className="btn btn-primary text-white px-6 py-3 rounded-lg text-lg"
+                >
+                    View More
+                </button>
+            </div>
+        </section>
         </div>
     );
 };

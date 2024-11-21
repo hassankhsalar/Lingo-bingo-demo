@@ -1,16 +1,16 @@
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import LessonCards from '../../components/LessonCards';
 
-const Lessons = () => {
-    const data = useLoaderData();
-    const navigate = useNavigate(); // Initialize navigate
-    const [selectedLesson, setSelectedLesson] = useState(null); // State to store the selected lesson
+
+const Lessons = ({ loaderData }) => {
+    const navigate = useNavigate();
+    const [selectedLesson, setSelectedLesson] = useState(null);
 
     // Filter data based on selected lesson or show all if null
     const filteredData = selectedLesson
-        ? data.filter((item) => item.lesson_no === selectedLesson)
-        : data;
+        ? loaderData.filter((item) => item.lesson_no === selectedLesson)
+        : loaderData;
 
     return (
         <div className="relative">
@@ -46,7 +46,7 @@ const Lessons = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
                 {filteredData.map((item) => (
                     <LessonCards
-                        key={item.id}
+                    key={item.id}
                         word={item.word}
                         meaning={item.meaning}
                         pronunciation={item.pronunciation}
@@ -54,8 +54,7 @@ const Lessons = () => {
                         difficulty={item.difficulty}
                         lessonNo={item.lesson_no}
                         whenToSay={item.when_to_say}
-                        example={item.example}
-                    />
+                        example={item.example}/>
                 ))}
             </div>
 

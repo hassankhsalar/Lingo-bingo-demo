@@ -6,7 +6,7 @@ import { AuthContext } from "../provider/AuthProvider";
 const Navbar = () => {
   const {user, logOut } = useContext(AuthContext);
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 rounded-2xl">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -32,7 +32,6 @@ const Navbar = () => {
         <li><a>About Us</a></li>
       </ul>
     </div>
-    <a className="btn btn-ghost text-xl">daisyUI</a>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -43,8 +42,12 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end gap-3">
-        <button className="text-2xl p-2 rounded-full border-2 border-sky-400"><FaUser /></button>
-        <p>{user && user.email}</p>
+        {
+          user && user?.email ? (<div className="flex items-center gap-2">
+            <img className="h-10 rounded-xl" src={user?.photoURL} alt="" />
+            <p>{user.displayName}</p>
+          </div>) :  (<FaUser />) 
+        }
         {
           user && user?.email ? (<button onClick={logOut} className="btn">LogOut</button>) : (<Link to="/auth/login" className="btn">Login</Link>)
         }

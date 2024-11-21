@@ -8,6 +8,9 @@ import AuthLayout from "../assets/layouts/AuthLayout";
 import Login from "../assets/Pages/Login";
 import Register from "../assets/Pages/Register";
 import PrivateRoute from "./PrivateRoute";
+import MyProfile from "../assets/Pages/MyProfile";
+import UpdateProfile from "../components/UpdateProfile";
+import ForgotPassword from "../assets/Pages/ForgotPassword";
 
 
 const router = createBrowserRouter([
@@ -28,13 +31,27 @@ const router = createBrowserRouter([
                 path: '/lessons',
                 element: ( 
                 <PrivateRoute>
-                    <Lessons></Lessons>,
+                    <Lessons></Lessons>
                 </PrivateRoute> ),
-                loader: ()=> fetch('word.json'),
+                loader: async () => fetch('word.json').then((res) => res.json()),
             },
             {
                 path: '/tutorials',
-                element: <Tutorials></Tutorials>,
+                element: ( <PrivateRoute>
+                    <Tutorials></Tutorials>
+                </PrivateRoute>),
+            },
+            {
+                path: '/myprofile',
+                element: ( <PrivateRoute>
+                    <MyProfile></MyProfile>
+                </PrivateRoute>),
+            },
+            {
+                path: '/updateprofile',
+                element: ( <PrivateRoute>
+                    <UpdateProfile></UpdateProfile>
+                </PrivateRoute>),
             },
         ]
     },
@@ -53,6 +70,10 @@ const router = createBrowserRouter([
             {
                 path: "/auth/register",
                 element: <Register></Register>
+            },
+            {
+                path: "/auth/forgotpassword",
+                element: <ForgotPassword></ForgotPassword>
             },
         ]
     },
