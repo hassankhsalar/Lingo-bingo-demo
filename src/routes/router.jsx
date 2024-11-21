@@ -11,6 +11,7 @@ import PrivateRoute from "./PrivateRoute";
 import MyProfile from "../assets/Pages/MyProfile";
 import UpdateProfile from "../components/UpdateProfile";
 import ForgotPassword from "../assets/Pages/ForgotPassword";
+import ErrorPage from "../assets/Pages/ErrorPage";
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,7 @@ const router = createBrowserRouter([
                     <UpdateProfile></UpdateProfile>
                 </PrivateRoute>),
             },
+            
         ]
     },
     {
@@ -79,7 +81,7 @@ const router = createBrowserRouter([
     },
     {
         path: "*",
-        element: <h1>error</h1>
+        element: <ErrorPage></ErrorPage>
     },
     
 ]);
