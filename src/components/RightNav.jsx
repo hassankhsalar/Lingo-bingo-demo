@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { FaBook, FaBrain, FaVideo } from "react-icons/fa";
 import { useContext } from "react";
 import { AuthContext } from "../provider/AuthProvider";
-import { FcGoogle } from "react-icons/fc"; // Google logo icon
+import { FcGoogle } from "react-icons/fc"; 
 
 const RightNav = () => {
     const { signInWithGoogle } = useContext(AuthContext);
@@ -10,7 +10,7 @@ const RightNav = () => {
     const handleGoogleLogin = () => {
         signInWithGoogle()
             .then(result => {
-                console.log("User signed in with Google:", result.user);
+                
             })
             .catch(err => {
                 console.error("Google sign-in error:", err.message);
@@ -31,7 +31,7 @@ const RightNav = () => {
                 </Link>
             </div>
             <div className="flex flex-col gap-4 w-10/12 mt-10">
-                {/* Google Login Button */}
+                
                 <button
                     onClick={handleGoogleLogin}
                     className="btn flex items-center justify-center gap-2 bg-white text-gray-700 border border-2 border-sky-500 hover:bg-green-100"

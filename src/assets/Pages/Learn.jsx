@@ -1,11 +1,11 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Card from '../../components/Card';
- // Assuming Card is in the components folder
+ 
 
 const Learn = () => {
-    const data = useLoaderData(); // Fetch data from the loader
-    console.log(data);
+    const data = useLoaderData(); 
+    
 
     return (
         <div>

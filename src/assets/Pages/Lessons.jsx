@@ -7,7 +7,7 @@ const Lessons = ({ loaderData }) => {
     const navigate = useNavigate();
     const [selectedLesson, setSelectedLesson] = useState(null);
 
-    // Filter data based on selected lesson or show all if null
+   
     const filteredData = selectedLesson
         ? loaderData.filter((item) => item.lesson_no === selectedLesson)
         : loaderData;
@@ -18,7 +18,7 @@ const Lessons = ({ loaderData }) => {
                 <h1 className="text-3xl font-bold text-center pb-10">Lessons</h1>
             </div>
 
-            {/* Lesson Filter Buttons */}
+           
             <div className="flex justify-between flex-wrap gap-2 mb-4">
                 {[1, 2, 3, 4, 5, 6].map((lesson) => (
                     <button
@@ -31,7 +31,7 @@ const Lessons = ({ loaderData }) => {
                         Lesson {lesson}
                     </button>
                 ))}
-                {/* Show All Button */}
+               
                 <button
                     className={`btn w-20 border-2 ${
                         selectedLesson === null ? 'bg-sky-500 text-white' : 'border-sky-500'
@@ -42,7 +42,7 @@ const Lessons = ({ loaderData }) => {
                 </button>
             </div>
 
-            {/* Vocabulary Cards */}
+           
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
                 {filteredData.map((item) => (
                     <LessonCards
@@ -58,7 +58,7 @@ const Lessons = ({ loaderData }) => {
                 ))}
             </div>
 
-            {/* Floating Back to Learning Button */}
+            
             <button
                 className="fixed bottom-4 right-4 p-3 bg-pink-600 text-white rounded-full shadow-lg 
                             hover:bg-pink-400 focus:ring-2 focus:ring-blue-300 transition-all sm:bottom-6 sm:right-6"

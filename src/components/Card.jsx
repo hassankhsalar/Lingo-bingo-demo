@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Card = ({ word, meaning, pronunciation, partOfSpeech, difficulty, lessonNo, whenToSay, example }) => {
     const navigate = useNavigate();
-    const [isModalOpen, setIsModalOpen] = useState(false); // State to control modal visibility
+    const [isModalOpen, setIsModalOpen] = useState(false); 
 
     return (
         <div 
@@ -12,7 +12,7 @@ const Card = ({ word, meaning, pronunciation, partOfSpeech, difficulty, lessonNo
                 difficulty === 'medium' ? 'bg-yellow-200' : 
                 'bg-red-200'
             }`}
-            style={{ height: '100%' }} // Ensures consistent card height
+            style={{ height: '100%' }} 
         >
             <div>
                 <h2 className="text-xl font-bold">{word}</h2>
@@ -22,7 +22,7 @@ const Card = ({ word, meaning, pronunciation, partOfSpeech, difficulty, lessonNo
                 <p><strong>Lesson:</strong> {lessonNo}</p>
             </div>
             <div className="flex gap-2 mt-4">
-                {/* View More Button */}
+                
                 <button 
                     className="p-2 bg-blue-400 text-white rounded"
                     onClick={() => navigate(`/lessons`)}
@@ -30,7 +30,7 @@ const Card = ({ word, meaning, pronunciation, partOfSpeech, difficulty, lessonNo
                     View More
                 </button>
 
-                {/* When to Say Button */}
+               
                 <button 
                     className="p-2 bg-green-500 text-white rounded"
                     onClick={() => setIsModalOpen(true)}
@@ -39,15 +39,15 @@ const Card = ({ word, meaning, pronunciation, partOfSpeech, difficulty, lessonNo
                 </button>
             </div>
 
-            {/* Modal */}
+            
             {isModalOpen && (
                 <div 
                     className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
-                    onClick={() => setIsModalOpen(false)} // Close modal when clicking outside
+                    onClick={() => setIsModalOpen(false)} 
                 >
                     <div 
                         className="bg-white p-6 rounded-lg shadow-lg w-3/4 max-w-md"
-                        onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
+                        onClick={(e) => e.stopPropagation()} 
                     >
                         <h2 className="text-xl font-bold mb-2">{word} - When to Say</h2>
                         <p className="mb-4">{whenToSay}</p>

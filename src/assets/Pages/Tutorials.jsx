@@ -10,7 +10,7 @@ const Tutorials = () => {
             </div>
             <div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
-            {/* Card 1 */}
+            
             <div className="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 <iframe
                     src="https://www.youtube.com/embed/4MNnv5hsfYw?si=i7f3rpMG8jLlAZqy"
@@ -24,7 +24,7 @@ const Tutorials = () => {
                 </div>
             </div>
 
-            {/* Card 2 */}
+            
             <div className="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 <iframe
                     src="https://www.youtube.com/embed/rGrBHiuPlT0?si=m-m-Wq8SoAdRxaF2"
@@ -38,7 +38,7 @@ const Tutorials = () => {
                 </div>
             </div>
 
-            {/* Card 3 */}
+            
             <div className="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 <iframe
                     src="https://www.youtube.com/embed/bOUqVC4XkOY?si=n63YQZk9T89FgnX4"
@@ -52,7 +52,7 @@ const Tutorials = () => {
                 </div>
             </div>
 
-            {/* Card 4 */}
+            
             <div className="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 <iframe width="500" height="315" src="https://www.youtube.com/embed/JnoZE51WZg4?si=XsJlU1yAqJ1VHjcc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className='rounded-2xl w-full h-48'></iframe>
                 <div className="card-body">
@@ -60,7 +60,7 @@ const Tutorials = () => {
                     <p>Learn Japanese Days of the Week and Days of the Month !</p> 
                 </div>
             </div>
-            {/* Card 5 */}
+           
             <div className="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 <iframe width="500" height="315" src="https://www.youtube.com/embed/k74yjmfFb_A?si=LgDbGgj45y0CTWzD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className='rounded-2xl w-full h-48'></iframe>
                 <div className="card-body">
@@ -68,7 +68,7 @@ const Tutorials = () => {
                     <p>Learn Japanese Going to a Destination!</p> 
                 </div>
             </div>
-            {/* Card 6 */}
+            
             <div className="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 <iframe width="500" height="315" src="https://www.youtube.com/embed/KUIWRsVZZZA?si=ZlxZS0dTxEqjL_BH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className='rounded-2xl w-full h-48'></iframe>
                 <div className="card-body">
@@ -76,7 +76,7 @@ const Tutorials = () => {
                     <p>Learn 4 Verbs (Nomimasu, Tabemasu, Mimasu, Kikimasu)!</p> 
                 </div>
             </div>
-            {/* Card 7 */}
+            
             <div className="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 <iframe width="500" height="315" src="https://www.youtube.com/embed/ZGGufccTLso?si=kM-BSgKmX-ZEzT5f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className='rounded-2xl w-full h-48'></iframe>
                 <div className="card-body">
@@ -84,7 +84,7 @@ const Tutorials = () => {
                     <p>Learn Japanese To do (verb)!</p> 
                 </div>
             </div>
-            {/* Card 8 */}
+            
             <div className="card bg-base-100 shadow-xl rounded-lg overflow-hidden">
                 <iframe width="500" height="315" src="https://www.youtube.com/embed/W0n-ODPwtzA?si=qvV3Fu_lm9syD3Fv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen className='rounded-2xl w-full h-48'></iframe>
                 <div className="card-body">
@@ -94,7 +94,7 @@ const Tutorials = () => {
             </div>
         </div>
             </div>
-            {/* Floating Button */}
+            
             <button
                 className="fixed bottom-4 right-4 p-3 bg-pink-600 text-white rounded-full shadow-lg 
                            hover:bg-pink-400 focus:ring-2 focus:ring-blue-300 transition-all 

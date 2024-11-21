@@ -18,19 +18,19 @@ const Register = () => {
 
         let validationErrors = {};
 
-        // Name Validation (At least 2 characters, no special characters)
+        
         const nameRegex = /^[a-zA-Z ]{2,}$/;
         if (!nameRegex.test(name)) {
             validationErrors.name = "Name must have at least 2 characters and contain only letters.";
         }
 
-        // Email Validation (Standard email format)
+        
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             validationErrors.email = "Invalid email format.";
         }
 
-        // Password Validation (At least 8 characters, including 1 uppercase, 1 number, and 1 special character)
+        
         const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
         if (!passwordRegex.test(password)) {
             validationErrors.password =
@@ -42,7 +42,7 @@ const Register = () => {
             return;
         }
 
-        // Proceed with Firebase authentication if no validation errors
+        
         createNewUser(email, password)
             .then((result) => {
                 const user = result.user;
@@ -53,7 +53,7 @@ const Register = () => {
             .catch((error) => {
                 const errorCode = error.code;
                 const errorMessage = error.message;
-                console.log(errorCode, errorMessage);
+                
             });
     };
 
@@ -65,7 +65,7 @@ const Register = () => {
                 </div>
                 <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                     <form onSubmit={handleSubmit} className="card-body">
-                        {/* Name Field */}
+                       
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">User Name</span>
@@ -82,7 +82,7 @@ const Register = () => {
                             )}
                         </div>
 
-                        {/* Photo Field */}
+                      
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Photo</span>
@@ -96,7 +96,7 @@ const Register = () => {
                             />
                         </div>
 
-                        {/* Email Field */}
+                       
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Email</span>
@@ -113,7 +113,7 @@ const Register = () => {
                             )}
                         </div>
 
-                        {/* Password Field */}
+                       
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
@@ -138,7 +138,7 @@ const Register = () => {
                             </label>
                         </div>
 
-                        {/* Submit Button */}
+                      
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Register</button>
                         </div>

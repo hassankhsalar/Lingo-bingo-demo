@@ -3,7 +3,7 @@ import { AuthContext } from "../provider/AuthProvider";
 import { useNavigate } from "react-router-dom";
 
 const UpdateProfile = () => {
-    const { user, updateUserProfile } = useContext(AuthContext); // Access user and update function
+    const { user, updateUserProfile } = useContext(AuthContext); 
     const [name, setName] = useState(user?.displayName || "");
     const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
     const navigate = useNavigate();
@@ -12,7 +12,7 @@ const UpdateProfile = () => {
         e.preventDefault();
         try {
             await updateUserProfile({ displayName: name, photoURL });
-            navigate("/myprofile"); // Navigate back to profile page
+            navigate("/myprofile"); 
         } catch (error) {
             console.error("Failed to update profile", error);
         }

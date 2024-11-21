@@ -10,12 +10,12 @@ const ForgotPassword = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simulate password update logic (replace with actual implementation)
+       
         if (email && password) {
-            // Assuming there's a function like updatePassword(email, newPassword)
-            // Call it here and handle success/failure
+        
+       
             setSuccess("Password updated successfully! You can now log in.");
-            setTimeout(() => navigate('/auth/login'), 2000); // Redirect to login page after 2 seconds
+            setTimeout(() => navigate('/auth/login'), 2000); 
         } else {
             setError("Please fill out all fields.");
         }

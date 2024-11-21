@@ -9,7 +9,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const Banner = () => {
-  const { user } = useContext(AuthContext); // Access user from AuthContext
+  const { user } = useContext(AuthContext);
     const navigate = useNavigate();
   const handleViewMore = () => {
     if (user) {

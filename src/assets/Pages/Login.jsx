@@ -8,7 +8,7 @@ const Login = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    // Extract the path the user was trying to access
+    
     const from = location.state?.from?.pathname || "/";
 
     const handleSubmit = (e) => {
@@ -21,7 +21,7 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 setUser(user);
-                // Redirect to the last attempted path or home if no previous path exists
+                
                 navigate(from, { replace: true });
             })
             .catch(err => {

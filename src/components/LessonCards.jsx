@@ -3,7 +3,7 @@ import React from 'react';
 const LessonCards = ({ word, meaning, pronunciation, partOfSpeech, difficulty, lessonNo, whenToSay, example }) => {
     const playPronunciation = () => {
         const utterance = new SpeechSynthesisUtterance(pronunciation);
-        utterance.lang = "ja-JP"; // Japanese language code
+        utterance.lang = "ja-JP"; 
         window.speechSynthesis.speak(utterance);
     };
 

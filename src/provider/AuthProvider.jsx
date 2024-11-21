@@ -10,7 +10,7 @@ const AuthProvider = ({ children }) => {
 
     const [user,setUser] = useState(null);
     const [loading,setLoading] = useState(true);
-    console.log(loading, user);
+    
 
     const createNewUser = (email,password)=>{
         setLoading(true);
@@ -38,7 +38,7 @@ const AuthProvider = ({ children }) => {
     const updateUserInProfile = async (updates) => {
         if (user) {
             await updateProfile(user, updates);
-            setUser({ ...user, ...updates }); // Update local state
+            setUser({ ...user, ...updates });
         }
     };
 
@@ -56,7 +56,7 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-            console.log('Auth state changed:', currentUser); // Logs the user object or null
+            
             setUser(currentUser);
             setLoading(false);
         });

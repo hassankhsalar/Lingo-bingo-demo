@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
 
 const MyProfile = () => {
-    const { user } = useContext(AuthContext); // Get the logged-in user details
+    const { user } = useContext(AuthContext); 
     const navigate = useNavigate();
 
     return (
